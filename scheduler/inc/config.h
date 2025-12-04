@@ -1,0 +1,25 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
+#define HSI_CLOCK   16000000U
+#define SYSTICK_TIM_CLK   HSI_CLOCK
+
+#define TASK_READY_STATE  0x00
+#define TASK_BLOCK_STATE  0x01
+
+#define SRAM_START        0x20000000U
+#define SRAM_SIZE         ((128) * (1024))
+#define SRAM_END          ((SRAM_START) + (SRAM_SIZE))
+#define STACK_TASK_SIZE   1024U
+#define STACK_SCHED_SIZE  1024U
+
+#define T1_STACK_START    SRAM_END
+#define T2_STACK_START    ((SRAM_END) - (1 * STACK_TASK_SIZE))
+#define T3_STACK_START    ((SRAM_END) - (2 * STACK_TASK_SIZE))
+#define T4_STACK_START    ((SRAM_END) - (3 * STACK_TASK_SIZE))
+#define IDLE_STACK_START  ((SRAM_END) - (4 * STACK_TASK_SIZE))
+#define SCHED_STACK_START ((SRAM_END) - (5 * STACK_TASK_SIZE))
+
+#define USER_MAX_TASK   4U
+
+#endif

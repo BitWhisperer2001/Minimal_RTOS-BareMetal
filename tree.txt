@@ -1,0 +1,23 @@
+minial_scheduler_bare-metal_embedded/
+├── inc/
+│   ├── led.h
+│   └── main.h
+├── source/
+│   ├── led.c
+│   └── main.c
+├── scheduler/
+│   ├── inc/
+│   │   ├── config.h
+│   │   └── mini_rtos.h
+│   └── src/
+│       └── mini_rtos.c
+├── startup/
+│   └── startup_stm32f411re.c
+├── build/
+│   ├── *.o
+│   ├── *.elf
+│   ├── *.bin
+│   ├── *.hex
+│   └── *.map
+├── linker_scripts.ld
+└── Makefile
